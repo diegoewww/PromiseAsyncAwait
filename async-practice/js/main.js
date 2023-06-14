@@ -1,6 +1,7 @@
 //Code 01
 // function houseOne(){
 //     console.log('Paper delivered to house 1')
+   
 // }
 // function houseTwo(){
 //     console.log('Paper delivered to house 2')
@@ -17,7 +18,7 @@
 //     console.log('Paper delivered to house 1')
 // }
 // function houseTwo(){
-//     setTimeout(() => console.log('Paper delivered to house 2'), 3000)
+//     setTimeout(() => console.log('Paper delivered to house 2'), 0)
 // }
 // function houseThree(){
 //     console.log('Paper delivered to house 3')
@@ -67,8 +68,17 @@
 // })
 // console.log(promise)
 // promise
-//     .then(data => console.log(data))
+//     .then(data => console.log(data)) 
 //     .catch(err => console.log(err))
+
+// fetch("https://dog.ceo/api/breeds/image/random")
+// .then(res=> res.json())
+// .then(data => {
+//     console.log(data)
+// })
+// .catch(err =>{
+//     console.log(`error ${err}`)
+// })
 
 //Code 06
 // function houseOne(){
@@ -101,44 +111,44 @@
 //     .catch(err => console.log(err))
 
 //Code 07
-// function houseOne(){
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve('Paper delivered to house 1')
-//         }, 1000)
-//     })
-// }
-// function houseTwo(){
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve('Paper delivered to house 2')
-//         }, 5000)
-//     })
-// }
-// function houseThree(){
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve('Paper delivered to house 3')
-//         }, 2000)
-//     })
-// }
+function houseOne(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Paper delivered to house 1')
+        }, 1000)
+    })
+}
+function houseTwo(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Paper delivered to house 2')
+        }, 5000)
+    })
+}
+function houseThree(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Paper delivered to house 3')
+        }, 2000)
+    })
+}
 
-// async function getPaid(){
-//     const houseOneWait = await houseOne()
-//     const houseTwoWait = await houseTwo()
-//     const houseThreeWait = await houseThree()
-//     console.log(houseOneWait)
-//     console.log(houseTwoWait)
-//     console.log(houseThreeWait)
-// }
+async function getPaid(){
+    const houseOneWait = await houseOne()
+    const houseTwoWait = await houseTwo()
+    const houseThreeWait = await houseThree()
+    console.log(houseOneWait)
+    console.log(houseTwoWait)
+    console.log(houseThreeWait)
+}
 
-// getPaid()
+getPaid()
 
 //Code 08
-// async function getACuteDogPhoto(){
-//     const res = await fetch('https://dog.ceo/api/breeds/image/random')
-//     const data = await res.json()
-//     console.log(data)
-// }
-// getACuteDogPhoto()
+async function getACuteDogPhoto(){
+    const res = await fetch('https://dog.ceo/api/breeds/image/random')
+    const data = await res.json()
+    console.log(data)
+}
+getACuteDogPhoto()
 
